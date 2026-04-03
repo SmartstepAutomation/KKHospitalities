@@ -1,11 +1,11 @@
 export interface Lead {
   id?: string;
   name: string;
-  phoneNumber: string;
+  phone: string;
   email?: string;
   propertyId: string;
   propertyName: string;
-  preferredDate: string;
+  preferredDate?: string;
   message?: string;
-  createdAt: string; // ISO String
+  createdAt?: any; 
 }

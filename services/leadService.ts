@@ -1,6 +1,7 @@
 import { db } from "@/lib/firebase";
 import { collection, query, orderBy, getDocs, limit, addDoc, serverTimestamp } from "firebase/firestore";
 import { isFirebaseConfigured } from "@/lib/firebase";
+import { Lead } from "@/types/lead";
 
 const LEADS_COLLECTION = "leads";
 
@@ -31,7 +32,7 @@ export const leadService = {
     try {
       const q = query(collection(db, LEADS_COLLECTION), orderBy("createdAt", "desc"));
       const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Lead));
     } catch (e) {
       console.error(e);
       return [];
@@ -45,7 +46,7 @@ export const leadService = {
     try {
       const q = query(collection(db, LEADS_COLLECTION), orderBy("createdAt", "desc"), limit(count));
       const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Lead));
     } catch (e) {
       console.error(e);
       return [];
