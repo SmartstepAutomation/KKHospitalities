@@ -1,5 +1,5 @@
 import { db } from "@/lib/firebase";
-import { collection, query, orderBy, getDocs, limit, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, query, orderBy, getDocs, limit, addDoc, serverTimestamp, doc, updateDoc } from "firebase/firestore";
 import { isFirebaseConfigured } from "@/lib/firebase";
 import { Lead } from "@/types/lead";
 
@@ -16,6 +16,7 @@ export const leadService = {
     try {
       await addDoc(collection(db, LEADS_COLLECTION), {
         ...data,
+        status: 'new',
         createdAt: serverTimestamp(),
       });
       return true;
@@ -50,6 +51,23 @@ export const leadService = {
     } catch (e) {
       console.error(e);
       return [];
+    }
+  },
+
+  // Update lead status
+  updateLeadStatus: async (leadId: string, status: string): Promise<boolean> => {
+    if (!isFirebaseConfigured || !db) {
+      console.log(`Demo Mode: Status updated to ${status} for lead ${leadId}`);
+      return true;
+    }
+
+    try {
+      const docRef = doc(db, LEADS_COLLECTION, leadId);
+      await updateDoc(docRef, { status });
+      return true;
+    } catch (e) {
+      console.error("Error updating lead status", e);
+      return false;
     }
   }
 };
