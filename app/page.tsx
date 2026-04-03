@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HiCheckCircle, HiArrowRight, HiShieldCheck, HiStar, HiLocationMarker, HiWifi, HiHome, HiSearch, HiCalendar, HiKey, HiDesktopComputer, HiAcademicCap, HiGlobeAlt } from "react-icons/hi";
+import { HiCheckCircle, HiArrowRight, HiShieldCheck, HiStar, HiLocationMarker, HiWifi, HiHome, HiSearch, HiCalendar, HiKey, HiDesktopComputer, HiAcademicCap, HiGlobeAlt, HiPhone } from "react-icons/hi";
 import { FaWhatsapp, FaWind, FaBroom, FaFire } from "react-icons/fa";
 import PropertyCard from "@/components/PropertyCard";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -307,34 +307,51 @@ export default async function Home() {
         <FAQAccordion />
       </section>
 
-      {/* Aggressive CTA Section */}
-      <section id="contact" className="max-w-5xl mx-auto px-6 w-full text-center scroll-mt-24 mb-12 md:mb-20">
-        <div className="bg-gradient-to-br from-[#ff385c] to-[#e31c5f] py-12 md:py-20 px-6 md:px-16 rounded-[2.5rem] md:rounded-[3rem] text-white flex flex-col items-center gap-6 shadow-2xl shadow-[#ff385c]/40 relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-10 opacity-10">
-            <HiShieldCheck className="text-[10rem] md:text-[15rem]" />
-          </div>
-          <div className="relative z-10 flex flex-col items-center gap-4">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight">Ready to see it yourself?</h2>
-            <p className="text-lg md:text-xl text-white/90 max-w-xl">
-              Rooms fill up fast. Contact us on WhatsApp or schedule a free visit.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mt-4 md:mt-8 w-full max-w-2xl justify-center items-center">
-              <a 
-                href="https://wa.me/919052909771?text=Hi,%20I'm%20interested%20in%20KK%20Hospitalities%20co-living%20in%20Hyderabad."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 bg-[#25D366] text-white p-4 rounded-xl font-bold hover:bg-[#1ebd5a] transition-all flex items-center justify-center gap-2"
-              >
-                <FaWhatsapp className="text-xl" /> WhatsApp
-              </a>
-              <a 
-                href="tel:+919052909771"
-                className="w-14 bg-gray-100 text-gray-700 p-4 rounded-xl font-bold hover:bg-gray-200 transition-all flex items-center justify-center"
-              >
-                Call Us
-              </a>
+      {/* Professional Footer CTA */}
+      <section id="contact" className="max-w-6xl mx-auto px-6 w-full scroll-mt-24 mb-16 md:mb-24">
+        <div className="relative bg-gray-900 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 border border-white/10">
+          
+          {/* Deep Gradient Background with Glow */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#ff385c] via-[#e31c5f] to-[#b91c1c] opacity-95"></div>
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-black/20 rounded-full blur-3xl"></div>
+          
+          <div className="relative z-10 flex-1 text-center md:text-left flex flex-col gap-4">
+            <div className="flex items-center gap-2 justify-center md:justify-start mb-2">
+              <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-black uppercase tracking-widest text-white/90 border border-white/20">
+                Limited Availability
+              </span>
             </div>
+            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[1.1]">
+              Ready to see <br className="hidden md:block" /> it yourself?
+            </h2>
+            <p className="text-lg md:text-xl text-white/80 max-w-lg font-medium leading-relaxed">
+              Rooms fill up fast. Connect with our property manager and schedule a free visit today.
+            </p>
+          </div>
+
+          <div className="relative z-10 flex flex-col sm:flex-row md:flex-col lg:flex-row items-center gap-4 w-full md:w-auto">
+            <a 
+              href="https://wa.me/919052909771?text=Hi,%20I'm%20interested%20in%20KK%20Hospitalities%20co-living%20in%20Hyderabad."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-10 py-5 bg-[#25D366] text-white rounded-2xl font-black text-lg hover:bg-white hover:text-[#25D366] transition-all duration-300 shadow-xl flex items-center justify-center gap-3 group"
+            >
+              <FaWhatsapp className="text-2xl group-hover:scale-110 transition-transform" />
+              WhatsApp Us
+            </a>
+            <a 
+              href="tel:+919052909771"
+              className="w-full sm:w-auto px-10 py-5 bg-white text-[#ff385c] rounded-2xl font-black text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl flex items-center justify-center gap-3 group"
+            >
+              <HiPhone className="text-2xl group-hover:rotate-12 transition-transform text-[#008489]" />
+              Call Now
+            </a>
+          </div>
+
+          {/* Symmetrical Background Decor */}
+          <div className="absolute top-1/2 -right-12 -translate-y-1/2 opacity-10 pointer-events-none hidden lg:block">
+            <HiShieldCheck className="text-[20rem] text-white" />
           </div>
         </div>
       </section>
