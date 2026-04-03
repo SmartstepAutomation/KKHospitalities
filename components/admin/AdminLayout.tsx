@@ -52,7 +52,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
       const isAdmin = await authService.checkIsAdmin(currentUser.email);
       if (!isAdmin) {
-        await signOut(auth);
+        if (auth) await signOut(auth);
         router.push("/admin/login");
         return;
       }

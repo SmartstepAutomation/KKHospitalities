@@ -1,3 +1,4 @@
+import React from 'react';
 import { HiLocationMarker, HiCheckCircle, HiHome, HiStar, HiDesktopComputer, HiWifi, HiLightningBolt, HiPhone } from "react-icons/hi";
 import { FaWind, FaBroom, FaCar, FaWhatsapp } from "react-icons/fa";
 import LeadForm from "@/components/LeadForm";
@@ -23,7 +24,7 @@ const mockProperty: Property = {
   ]
 };
 
-const amenityIcons: Record<string, JSX.Element> = {
+const amenityIcons: Record<string, React.ReactNode> = {
   "WiFi": <HiWifi />,
   "High-speed WiFi": <HiWifi />,
   "AC": <FaWind />,
@@ -47,7 +48,7 @@ export default async function PropertyDetail({ params }: { params: { id: string 
 
   if (!property) return <div>Property not found</div>;
 
-  const whatsappUrl = `https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20your%20${encodeURIComponent(property.name)}%20in%20Hyderabad.`;
+  const whatsappUrl = `https://wa.me/919052909771?text=Hi,%20I'm%20interested%20in%20your%20${encodeURIComponent(property.name)}%20in%20Hyderabad.`;
 
   return (
     <div className="flex flex-col pb-0">
@@ -161,7 +162,7 @@ export default async function PropertyDetail({ params }: { params: { id: string 
                       <FaWhatsapp className="text-xl" /> WhatsApp
                     </a>
                     <a 
-                      href="tel:+919876543210"
+                      href="tel:+919052909771"
                       className="w-14 bg-gray-100 text-gray-700 p-4 rounded-2xl font-bold hover:bg-gray-200 transition-all flex items-center justify-center"
                     >
                       <HiPhone className="text-xl" />

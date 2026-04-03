@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="flex flex-col gap-4 md:gap-6">
           <h4 className="text-lg md:text-xl font-bold text-gray-900">Contact Us</h4>
           <ul className="flex flex-col gap-4 text-sm md:text-base">
-            <li className="flex items-center gap-3"><HiPhone className="text-xl text-[#008489]" /> +91 98765 43210</li>
+            <li className="flex items-center gap-3"><HiPhone className="text-xl text-[#008489]" /> +91 90529 09771</li>
             <li className="flex items-center gap-3"><HiMail className="text-xl text-[#008489]" /> info@kkhospitalities.com</li>
             <li className="flex items-center gap-3 items-start">
               <HiLocationMarker className="text-xl text-[#008489] shrink-0 mt-0.5" /> 

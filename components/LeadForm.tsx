@@ -15,9 +15,9 @@ export default function LeadForm({ propertyId, propertyName }: { propertyId: str
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      await leadService.submitLead({
+      await leadService.addLead({
         name,
-        phoneNumber,
+        phone: phoneNumber,
         propertyId,
         propertyName,
         preferredDate,

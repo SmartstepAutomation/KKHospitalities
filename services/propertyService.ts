@@ -155,7 +155,7 @@ export const propertyService = {
     if (!isFirebaseConfigured || !db) {
       const newProp = { id: Math.random().toString(), ...data, createdAt: new Date().toISOString() } as Property;
       MOCK_PROPERTIES.unshift(newProp);
-      return newProp.id;
+      return newProp.id || null;
     }
     
     try {

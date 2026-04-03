@@ -4,7 +4,7 @@ import { HiPhone, HiChatAlt2, HiCalendar } from "react-icons/hi";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function CTAStickyBar({ propertyName }: { propertyName: string }) {
-  const whatsappUrl = `https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20your%20${encodeURIComponent(propertyName)}%20in%20Hyderabad.`;
+  const whatsappUrl = `https://wa.me/919052909771?text=Hi,%20I'm%20interested%20in%20your%20${encodeURIComponent(propertyName)}%20in%20Hyderabad.`;
 
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-[60] bg-white/90 backdrop-blur-md border-t border-gray-100 p-4 shadow-2xl flex items-center justify-between gap-4">
@@ -15,7 +15,7 @@ export default function CTAStickyBar({ propertyName }: { propertyName: string })
 
       <div className="flex items-center gap-3">
         <a 
-          href="tel:+919876543210" 
+          href="tel:+919052909771" 
           className="w-14 h-14 bg-gray-100 text-gray-700 rounded-2xl flex items-center justify-center text-2xl active:scale-95 transition-all"
         >
           <HiPhone />

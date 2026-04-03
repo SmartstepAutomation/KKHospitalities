@@ -321,16 +321,16 @@ export default async function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 mt-4 md:mt-8 w-full max-w-2xl justify-center items-center">
               <a 
-                href="https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20KK%20Hospitalities%20co-living%20in%20Hyderabad."
+                href="https://wa.me/919052909771?text=Hi,%20I'm%20interested%20in%20KK%20Hospitalities%20co-living%20in%20Hyderabad."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#25D366] text-white w-full sm:w-auto px-8 py-3.5 md:py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg hover:bg-[#1ebd5a] transition-all shadow-xl flex items-center justify-center gap-2"
+                className="flex-1 bg-[#25D366] text-white p-4 rounded-xl font-bold hover:bg-[#1ebd5a] transition-all flex items-center justify-center gap-2"
               >
-                <FaWhatsapp className="text-xl md:text-2xl" /> WhatsApp
+                <FaWhatsapp className="text-xl" /> WhatsApp
               </a>
               <a 
-                href="tel:+919876543210"
-                className="bg-white text-[#ff385c] w-full sm:w-auto px-8 py-3.5 md:py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg hover:bg-gray-100 transition-all shadow-xl flex items-center justify-center"
+                href="tel:+919052909771"
+                className="w-14 bg-gray-100 text-gray-700 p-4 rounded-xl font-bold hover:bg-gray-200 transition-all flex items-center justify-center"
               >
                 Call Us
               </a>

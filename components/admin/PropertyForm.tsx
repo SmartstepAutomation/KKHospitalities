@@ -86,6 +86,7 @@ export default function PropertyForm({ initialData }: { initialData?: Property }
 
   const addRoomType = () => {
     const newRoom: RoomType = {
+      propertyId: formData.id || "temp",
       type: "single",
       price: 15000,
       deposit: 30000,
@@ -228,7 +229,7 @@ export default function PropertyForm({ initialData }: { initialData?: Property }
                     value={room.type}
                     onChange={(e) => {
                       const arr = [...(formData.roomTypes || [])];
-                      arr[idx].type = e.target.value;
+                      arr[idx].type = e.target.value as any;
                       setFormData({...formData, roomTypes: arr});
                     }}
                     className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg focus:ring-[#008489] text-sm font-bold"

@@ -6,7 +6,7 @@ import { Property } from "@/types/property";
 export default function PropertyCard({ property }: { property: Property }) {
   // Use first image or a placeholder
   const imageUrl = property.images?.[0] || "/placeholder-room.jpg";
-  const whatsappUrl = `https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20your%20${encodeURIComponent(property.name)}%20in%20Hyderabad.`;
+  const whatsappUrl = `https://wa.me/919052909771?text=Hi,%20I'm%20interested%20in%20your%20${encodeURIComponent(property.name)}%20in%20Hyderabad.`;
   
   return (
     <div className="card-premium h-full group flex flex-col">

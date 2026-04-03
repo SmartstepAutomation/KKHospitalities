@@ -26,7 +26,7 @@ export default function FloatingActions() {
     });
   };
 
-  const whatsappUrl = "https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20KK%20Hospitalities%20co-living%20in%20Hyderabad.";
+  const whatsappUrl = "https://wa.me/919052909771?text=Hi,%20I'm%20interested%20in%20KK%20Hospitalities%20co-living%20in%20Hyderabad.";
 
   return (
     <div className="fixed bottom-6 right-6 z-[9999] flex flex-col gap-4 items-end">
